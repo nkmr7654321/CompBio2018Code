@@ -1,4 +1,5 @@
 #include<stadio.h>
+#include<math.h>
 
 int main(void){
 
