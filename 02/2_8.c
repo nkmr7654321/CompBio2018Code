@@ -2,7 +2,7 @@
 
 int main(void){
 
-  double x=10,xx,r,k=100.0
+  double x=10,xx,r,k=100.0;
   int t;
   FILE +fp:
 
