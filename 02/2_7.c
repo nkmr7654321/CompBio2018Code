@@ -1,20 +1,22 @@
 #include <stdio.h>
 #include<math.h>
+
 int main(void){
-  int t;
-  double r,x,xx,k;
+  int t=0;
+  double r,x,xx,k=100.0;
   FILE *fp;
-  k=100.0;
 
   fp=fopen("outputt.dat","a");
 
-for(r=1.0;r<3.0;r+=0.1){
-  x=1;
- for(t=250;t<300;t++){
-  xx=x+r*(1-x/k)*x;
-  fprintf(fp, "%d,%f\n",t,xx );
+for(r=1.0;r<2.0;r+=0.001){
+  x=10.0;
+ for(t=0;t<300;t++){
+  xx=x+r*(1.0-x/k)*x;
+  if(t>=250){
+   fprintf(fp,"%.3f,%1f\n",t,xx );
+ }
   x=xx;
-}
+ }
 }
 
 fclose(fp);
